@@ -30,3 +30,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+## exclude test resourses
+src/test/resources/xml
