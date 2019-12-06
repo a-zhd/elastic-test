@@ -22,10 +22,17 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+	implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
 	testImplementation("io.projectreactor:reactor-test")
+	testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0")
+	testImplementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+	testImplementation("org.junit.jupiter:junit-jupiter-params:5.3.1")
+	testImplementation("org.jeasy:easy-random-core:4.0.0")
 }
 
 tasks.withType<Test> {
