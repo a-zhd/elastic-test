@@ -1,19 +1,21 @@
 package ru.azhd.petro.elastictest.configuration.web
 
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.core.publisher.Mono
-import ru.azhd.petro.elastictest.model.Rss
 import ru.azhd.petro.elastictest.model.NewsItem
+import ru.azhd.petro.elastictest.model.Rss
 import ru.azhd.petro.elastictest.service.IIndexService
 
-interface IHttpHandler {
+interface IElkHttpHandler {
     fun createIndex(serverRequest: ServerRequest): Mono<ServerResponse>
     fun createIndexBulk(serverRequest: ServerRequest): Mono<ServerResponse>
 }
 
-class HttpHandler(@Autowired val indexService: IIndexService) : IHttpHandler {
+@Component
+class ElkHttpHandler(@Autowired val indexService: IIndexService) : IElkHttpHandler {
 
     override fun createIndex(serverRequest: ServerRequest): Mono<ServerResponse> {
         return serverRequest.bodyToMono(NewsItem::class.java)

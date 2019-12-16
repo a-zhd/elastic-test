@@ -12,7 +12,7 @@ interface IIndexService {
 }
 
 @Service
-class IndexService(@Autowired private val elkClient: ElkClient) : IIndexService {
+class IndexService(@Autowired private val elkClient: IElkClient) : IIndexService {
     override fun createIndex(newsItem: NewsItem) {
         elkClient.save(newsItem)
     }

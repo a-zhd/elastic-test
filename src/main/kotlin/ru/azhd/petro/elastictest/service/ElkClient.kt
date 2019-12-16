@@ -12,11 +12,9 @@ interface IElkClient {
 }
 
 @Service
-class ElkClient(
-        @Autowired private val newsIndexRepository: INewsIndexRepository
-) : IElkClient {
+class ElkClient(@Autowired private val newsIndexRepository: INewsIndexRepository) : IElkClient {
 
-    companion object {
+    private companion object {
         val logger = LoggerFactory.getLogger(ElkClient::class.java)
     }
 

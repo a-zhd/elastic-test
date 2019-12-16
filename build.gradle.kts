@@ -29,10 +29,10 @@ dependencies {
 	}
 	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0")
-	testImplementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
-	testImplementation("org.junit.jupiter:junit-jupiter-params:5.3.1")
-	testImplementation("org.jeasy:easy-random-core:4.0.0")
+//	testImplementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.2")
+//	testImplementation("org.junit.jupiter:junit-jupiter-params:5.4.2")
+//	testImplementation("org.jeasy:easy-random-core:4.0.0")
 }
 
 tasks.withType<Test> {
